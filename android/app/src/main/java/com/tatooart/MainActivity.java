@@ -1,4 +1,4 @@
-package com.tatooart;
+package com.tatooart.newmodels;
 
 import com.facebook.react.ReactActivity;
 
