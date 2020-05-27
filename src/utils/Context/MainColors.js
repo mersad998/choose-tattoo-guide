@@ -3,9 +3,9 @@ const MainColors = {
     // Theme 1 : Default
     key: '1',
     Background: '#fff',
-    NavBar: '#b570b0',
-    TextColor: '#53092a',
-    Header: '#f5daf3',
+    NavBar: '#111112',
+    TextColor: '#c0bbc9',
+    Header: '#222124',
     Button: '#c09048',
     ButtonText: '#fff', // white
   },

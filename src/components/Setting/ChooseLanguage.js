@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import {StyleSheet, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, View, TouchableOpacity, StatusBar} from 'react-native';
 import SideMenu from 'react-native-side-menu';
 import CustomDrawer from 'utils/constants/CustomDrawer';
 import {MyHeader, CoustomTextComponent} from 'utils/constants/elements';
@@ -95,6 +95,8 @@ export default function ChooseLanguage(props) {
         Title={language.txtChooseLanguage}
         onHamburgerPress={toggleNavBar}
       />
+      <StatusBar backgroundColor={colors.NavBar} />
+
       <Content style={styles.Container(colors.Background)}>
         <SeettingItem
           name="فارسی"

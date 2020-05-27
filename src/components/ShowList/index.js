@@ -108,7 +108,7 @@ export default function ShowList(props) {
         onHamburgerPress={toggleNavBar}
         onBackPress={handleBack}
       />
-      <StatusBar backgroundColor={darkPink} />
+      <StatusBar backgroundColor={colors.NavBar} />
       <View style={styles.Container}>
         {items && items.length > 0 ? (
           <FlatList
@@ -119,18 +119,6 @@ export default function ShowList(props) {
             windowSize={8}
             keyExtractor={i => i.ID}
             renderItem={renderItems}
-            // onEndReached={() => {
-            //   if (!props.isLoading) {
-            //     loadPage();
-            //   }
-            // }}
-            // onEndReachedThreshold={0.9}
-            // refreshControl={
-            //   <RefreshControl
-            //     refreshing={props.isLoading}
-            //     onRefresh={() => loadPage(true)}
-            //   />
-            // }
           />
         ) : null}
       </View>

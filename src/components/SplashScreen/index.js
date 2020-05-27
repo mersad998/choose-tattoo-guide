@@ -126,7 +126,7 @@ export default function SplashScreen(props) {
   return (
     <Background>
       <View style={styles.Container}>
-        <StatusBar backgroundColor={darkPink} />
+        <StatusBar backgroundColor={'#111112'} />
         <Image
           resizeMode={'stretch'}
           source={require('assets/logo.png')}
@@ -136,7 +136,7 @@ export default function SplashScreen(props) {
           {language.txtSlogen}
         </CoustomTextComponent>
         <View style={styles.BottomLayout}>
-          <Spinner color="#d4a1d0" style={styles.Spinner} />
+          <Spinner color="#d1d0d6" style={styles.Spinner} />
           <CoustomTextComponent style={styles.TextDescription}>
             {language.txtLoading}
           </CoustomTextComponent>
@@ -152,14 +152,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   Image: {
-    width: 120,
-    height: 120,
+    width: 160,
+    height: 160,
     alignSelf: 'center',
     marginTop: '30%',
+    borderWidth: 0.5,
+    borderColor: 'grey',
   },
   Text: {
     marginTop: 30,
-    color: 'black',
+    color: 'white',
     fontSize: 16,
   },
   Spinner: {
@@ -167,7 +169,7 @@ const styles = StyleSheet.create({
   },
   TextDescription: {
     marginTop: 8,
-    color: 'black',
+    color: 'white',
     fontSize: 12,
   },
   BottomLayout: {

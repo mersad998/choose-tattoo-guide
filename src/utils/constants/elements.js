@@ -66,7 +66,7 @@ export const Content = ({...props}) => (
 
 export const Background = ({...props}) => (
   <LinearGradient
-    colors={[darkPink, lightPink]}
+    colors={['#121112', darkPink]}
     style={backgroundStyle.container}
     {...props}
   />

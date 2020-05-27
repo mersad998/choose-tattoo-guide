@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react';
 import {ColorThemeContext} from 'utils/Context/ColorThemeContext';
-import {StyleSheet, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, View, TouchableOpacity, StatusBar} from 'react-native';
 import SideMenu from 'react-native-side-menu';
 import CustomDrawer from 'utils/constants/CustomDrawer';
 import {MyHeader, CoustomTextComponent} from 'utils/constants/elements';
@@ -26,9 +26,9 @@ export default function Setting(props) {
       <Icon
         type="FontAwesome5"
         name={IconName}
-        style={styles.itemIcon(colors.TextColor)}
+        style={styles.itemIcon(colors.NavBar)}
       />
-      <CoustomTextComponent style={styles.itemTitle(colors.TextColor)}>
+      <CoustomTextComponent style={styles.itemTitle(colors.NavBar)}>
         {name}
       </CoustomTextComponent>
     </TouchableOpacity>
@@ -54,6 +54,7 @@ export default function Setting(props) {
       isOpen={drawer}
       bounceBackOnOverdraw={false}>
       <MyHeader Title={language.txtSetting} onHamburgerPress={toggleNavBar} />
+      <StatusBar backgroundColor={colors.NavBar} />
       <View style={styles.Container(colors.Background)}>
         <SeettingItem
           name={language.txtChooseTheme}

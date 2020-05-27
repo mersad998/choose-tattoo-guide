@@ -5,6 +5,7 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
+  BackHandler,
 } from 'react-native';
 import {CoustomTextComponent} from 'utils/constants/elements';
 import {
@@ -91,7 +92,9 @@ export default function CustomDrawer(props) {
           style={{backgroundColor: backGroundGrey}}
         />
 
-        <TouchableOpacity style={styles.drawerItemContainerNoBorder}>
+        <TouchableOpacity
+          style={styles.drawerItemContainerNoBorder}
+          onPress={() => BackHandler.exitApp()}>
           <Icon
             type="FontAwesome"
             name="remove"

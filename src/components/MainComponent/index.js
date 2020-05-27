@@ -110,7 +110,7 @@ export default function MainComponent(props) {
         onHamburgerPress={toggleNavBar}
         hasNotification
       />
-      <StatusBar backgroundColor={darkPink} />
+      <StatusBar backgroundColor={'#111112'} />
       <FlashMessage position="top" />
       <View style={styles.Container(colors.Background)}>
         <IconInput
@@ -132,14 +132,14 @@ export default function MainComponent(props) {
                 <>
                   <View style={styles.rowView}>
                     <Icon
-                      name="hands"
+                      name="sticky-note"
                       type="FontAwesome5"
                       style={styles.Icon(colors.TextColor)}
                     />
                   </View>
 
                   <Text style={styles.Text(colors.TextColor)}>
-                    {language.txtHandNails}
+                    {language.txtPrintable}
                   </Text>
                 </>
               </TabHeading>
@@ -153,14 +153,14 @@ export default function MainComponent(props) {
                 <>
                   <View style={styles.rowView}>
                     <Icon
-                      name="palette"
+                      name="allergies"
                       type="FontAwesome5"
                       style={styles.Icon(colors.TextColor)}
                     />
                   </View>
 
                   <Text style={styles.Text(colors.TextColor)}>
-                    {language.txtFoofNails}
+                    {language.txtBody}
                   </Text>
                 </>
               </TabHeading>
