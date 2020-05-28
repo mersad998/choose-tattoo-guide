@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import {StyleSheet, View, TouchableOpacity,StatusBar} from 'react-native';
+import {StyleSheet, View, TouchableOpacity, StatusBar} from 'react-native';
 import SideMenu from 'react-native-side-menu';
 import CustomDrawer from 'utils/constants/CustomDrawer';
 import {MyHeader, CoustomTextComponent} from 'utils/constants/elements';

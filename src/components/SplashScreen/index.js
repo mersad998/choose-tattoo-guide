@@ -10,7 +10,6 @@ import MainColors from 'utils/Context/MainColors';
 import {getAppGeneralInfo} from 'utils/database/AppGeneralInfo';
 import {FontsContext} from 'utils/Context/FontsContext';
 import Fonts from 'utils/Context/Fonts';
-import {darkPink} from 'utils/constants/colors';
 
 export default function SplashScreen(props) {
   const {colors, setColors} = useContext(ColorThemeContext);

@@ -1,4 +1,6 @@
 export const assetsObject = {
+  //logo
+  logo: require('../../../assets/logo.png'),
   // Category Images
   C1: require('../../../assets/CategoryIcons/C1.jpg'),
   C2: require('../../../assets/CategoryIcons/C2.jpg'),

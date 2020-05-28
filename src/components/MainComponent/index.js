@@ -8,7 +8,6 @@ import {
 import SideMenu from 'react-native-side-menu';
 import CustomDrawer from 'utils/constants/CustomDrawer';
 import {ColorThemeContext} from 'utils/Context/ColorThemeContext';
-import {darkPink} from 'utils/constants/colors';
 import {LanguageContext} from 'utils/Context/LanguageContext';
 import {
   Tab,

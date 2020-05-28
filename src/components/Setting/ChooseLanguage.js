@@ -35,7 +35,7 @@ export default function ChooseLanguage(props) {
       <View style={styles.ColorsContainer}>
         <Flag code={Country} />
       </View>
-      <CoustomTextComponent style={styles.itemTitle(colors.TextColor)}>
+      <CoustomTextComponent style={styles.itemTitle(colors.NavBar)}>
         {name}
       </CoustomTextComponent>
     </TouchableOpacity>

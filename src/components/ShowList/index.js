@@ -1,10 +1,16 @@
 import React, {useState, useContext, useEffect} from 'react';
-import {View, StyleSheet, StatusBar, Image, FlatList} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  StatusBar,
+  Image,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 import {MyHeader, CoustomTextComponent} from 'utils/constants/elements';
 import SideMenu from 'react-native-side-menu';
 import CustomDrawer from 'utils/constants/CustomDrawer';
 import {ColorThemeContext} from 'utils/Context/ColorThemeContext';
-import {darkPink} from 'utils/constants/colors';
 import {LanguageContext} from 'utils/Context/LanguageContext';
 import {Card, CardItem, Thumbnail, Text, Left, Body} from 'native-base';
 import {Photos} from 'utils/Data/Photos';
@@ -55,6 +61,11 @@ export default function ShowList(props) {
       setDrawer(state);
     }, 500);
   }
+  const fullScreenImage = id => {
+    props.navigation.navigate('FullScreenImage', {
+      id: id,
+    });
+  };
 
   const renderItems = ({item, index}) => {
     return (
@@ -77,10 +88,14 @@ export default function ShowList(props) {
         </CardItem>
         <CardItem style={styles.bottemCard}>
           <Body>
-            <Image
-              source={assetsObject[item.ID]}
-              style={styles.MainImage(colors.NavBar)}
-            />
+            <TouchableOpacity
+              style={styles.ImageTouchable}
+              onPress={() => fullScreenImage(item.ID)}>
+              <Image
+                source={assetsObject[item.ID]}
+                style={styles.MainImage(colors.NavBar)}
+              />
+            </TouchableOpacity>
             <CoustomTextComponent style={styles.descText(colors.TextColor)}>
               {language.key === 'FA' ? item.FaDescription : item.EnDescription}
             </CoustomTextComponent>
@@ -161,6 +176,9 @@ const styles = StyleSheet.create({
       borderWidth: 0.5,
       borderColor: color,
     };
+  },
+  ImageTouchable: {
+    alignSelf: 'center',
   },
   MainImage: color => {
     return {
