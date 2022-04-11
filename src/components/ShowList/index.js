@@ -96,7 +96,7 @@ export default function ShowList(props) {
                 style={styles.MainImage(colors.NavBar)}
               />
             </TouchableOpacity>
-            <CoustomTextComponent style={styles.descText(colors.TextColor)}>
+            <CoustomTextComponent style={styles.descText(colors.Header)}>
               {language.key === 'FA' ? item.FaDescription : item.EnDescription}
             </CoustomTextComponent>
           </Body>
